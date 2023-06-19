@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CardPage from './Pages/CardPage';
+import CartDetailsPage from './Pages/CarDetailsPage';
+import info from "./MOCK_CART_EXO_1.json"
 
-function App() {
+const App = () => {
+
+
+  const [data, setData] = useState({});
+  const userData= data[0]
+
+
+  
+    useEffect(() => {
+    setData(info)
+    }, []);
+    
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Routes>
+         <Route exact path="/" element={<CardPage data={userData} />}> </Route> 
+          <Route path="/cartdetails" element={<CartDetailsPage />}>
+          </Route>
+        </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
