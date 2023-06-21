@@ -1,0 +1,1 @@
+export const imgDefault = "https://cdn-dior.manager.tv/files/IMAGE_BOXES.jpg"

@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        
+        
+        
+    {
+        "command": "npm start",
+        "name": "Run npm start",
+        "request": "launch",
+        "type": "node-terminal"
+    },
+    {
+        "command": "npm install",
+        "name": "Run npm install",
+        "request": "launch",
+        "type": "node-terminal"
+    }
+    ]
+}
